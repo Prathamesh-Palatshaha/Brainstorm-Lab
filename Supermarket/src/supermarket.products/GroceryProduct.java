@@ -1,5 +1,5 @@
 package supermarket.products;
-
+import java.util.*;
 public class GroceryProduct {
     private String name;
     private double discount;
@@ -51,5 +51,29 @@ public class GroceryProduct {
         return (
             "Name: "+ name +"\n" + "Price: "+ price+"\n"+"Discount: "+discount+"%"
         );
+    }
+
+    public static void main(String[] args) {
+        ArrayList <GroceryProduct> cart = new ArrayList<GroceryProduct>();
+        GroceryProduct toast = new GroceryProduct("Toast", 100, 10);
+        cart.add(toast);
+        System.out.println("Price post discount: "+ toast.getActualPrice());
+
+        Beverage coke = new Beverage("Coke", 0, 60,SugarLevel.ADDED_SUGAR);
+
+        cart.add(coke);
+        System.out.println("Price post discount: "+ coke.getActualPrice());
+        DairyProduct milk = new DairyProduct("Milk", 0, 72, Fat.FULLCREAM);
+
+        cart.add(milk);
+        System.out.println("Price post discount: "+ milk.getActualPrice());
+        double totalPrice = 0;
+
+        for (int i = 0; i < cart.size(); i++) {
+            totalPrice += cart.get(i).getActualPrice();
+        }
+
+        System.out.println("Total Price of the cart is: "+ totalPrice);
+
     }
 }
