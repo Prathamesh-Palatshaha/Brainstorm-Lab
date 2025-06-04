@@ -1,0 +1,17 @@
+Inheritance is a fundamental concept in object-oriented programming (OOP) where a class (subclass or derived class) can inherit attributes and behaviors from another class (superclass or base class). It promotes code reusability and allows for the creation of a hierarchical classification of classes. Let's delve into inheritance and its types:
+
+Inheritance in Java:
+Superclass (Base Class):
+
+The class whose features are inherited is known as the superclass or base class.
+It defines common attributes and methods that are shared by all subclasses.
+Subclass (Derived Class):
+
+The class that inherits features from another class is known as the subclass or derived class.
+It extends the functionality of the superclass by adding new attributes or methods, or by overriding existing methods.
+
+Types of Inheritance:
+1. Single Level Inheritance
+2. Multilevel Inheritance
+3. Hierarchical Inheritance
+4. Multiple Inheritance (through Interfaces)
